@@ -1,0 +1,28 @@
+.social {
+  .reset();
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.social__item {
+  margin-right: 10px;
+}
+
+.social__link {
+  display: block;
+  width: 24px;
+  height: 24px;
+  
+  svg {
+    fill: #777f8c;
+    transition: all .3s ease;
+  }
+  
+  &:hover svg,
+  &:active svg {
+    fill: #fff;
+    transition: all .3s ease;
+  }
+}

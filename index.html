@@ -33,13 +33,13 @@
       <div class="header__info">
         <div class="header__top">
           <div class="header__place">
-            <a href="#" class="header__city"><i class="fas fa-map-marker-alt"></i>Москва</a>
+            <a href="#" class="header__city"><i class="fas fa-map-marker-alt"></i><span>Москва</span></a>
             <div class="header__drop">
               
             </div>
           </div>
-          <a href="#" class="header__link">Сертификаты и рекламные материалы</a>
-          <a href="#" class="header__link">Личный кабинет</a>
+          <a href="#" class="header__link"><span>Сертификаты и рекламные материалы</span></a>
+          <a href="#" class="header__link"><span>Личный кабинет</span></a>
           <ul class="social">
             <li class="social__item">
               <a href="#" class="social__link" title="Facebook">
@@ -58,13 +58,13 @@
             <li class="social__item">
               <a href="#" class="social__link" title="Instagram">
                 <svg height="24px" width="24px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                  <use href="icon-in"></use>
+                  <use href="#icon-in"></use>
                 </svg>
               </a>
             </li>
           </ul>
           <div class="header__langs">
-            <a href="#" class="header__lang">Ru</a>
+            <a href="#" class="header__lang header__lang--active">Ru</a>
             <a href="#" class="header__lang">En</a>
           </div>
         </div>
@@ -102,30 +102,34 @@
   
   <main>
     <section class="promo">
-      <div class="wrapper">
-        <div class="swiper-container promo__slider">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide promo__slide" style="background-image:url(img/images/slide-1.jpg);">
+      <div class="swiper-container promo__slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide promo__slide" style="background-image:url(img/images/slide-1.jpg);">
+            <div class="wrapper">
               <div class="promo__info">
                 <div class="promo__seria">
                   <div class="promo__seria-left">LK</div>
                   <div class="promo__seria-right">Серия LK</div>
                 </div>
                 <p class="promo__title">Актуальное сочетание вставки с однотонными покрытиями</p>
-                <a href="#" class="link promo__link"><span>Подробнее</span></a>
+                <a href="#" class="link promo__link"><span>Подробнее</span><i class="fas fa-arrow-right"></i></a>
               </div>
             </div>
-            <div class="swiper-slide promo__slide" style="background-image:url(img/images/slide-2.jpg);">
+          </div>
+          <div class="swiper-slide promo__slide" style="background-image:url(img/images/slide-2.jpg);">
+            <div class="wrapper">
               <div class="promo__info">
                 <div class="promo__seria">
                   <div class="promo__seria-left">AG</div>
                   <div class="promo__seria-right">Серия AG</div>
                 </div>
                 <p class="promo__title">Двери серии AG в стиле Лофт  – главный акцент в интерьере</p>
-                <a href="#" class="link promo__link"><span>Подробнее</span></a>
+                <a href="#" class="link promo__link"><span>Подробнее</span><i class="fas fa-arrow-right"></i></a>
               </div>
             </div>
-            <div class="swiper-slide promo__slide" style="background-image:url(img/images/slide-3.jpg);">
+          </div>
+          <div class="swiper-slide promo__slide" style="background-image:url(img/images/slide-3.jpg);">
+            <div class="wrapper">
               <div class="promo__info">
                 <div class="promo__seria">
                   <div class="promo__seria-left">AGK</div>
@@ -135,7 +139,9 @@
                 <a href="#" class="link promo__link"><span>Подробнее</span><i class="fas fa-arrow-right"></i></a>
               </div>
             </div>
-            <div class="swiper-slide promo__slide" style="background-image:url(img/images/slide-4.jpg);">
+          </div>
+          <div class="swiper-slide promo__slide" style="background-image:url(img/images/slide-4.jpg);">
+            <div class="wrapper">
               <div class="promo__info">
                 <div class="promo__seria">
                   <div class="promo__seria-left">E</div>
@@ -145,7 +151,9 @@
                 <a href="#" class="link promo__link"><span>Подробнее</span><i class="fas fa-arrow-right"></i></a>
               </div>
             </div>
-            <div class="swiper-slide promo__slide" style="background-image:url(img/images/slide-5.jpg);">
+          </div>
+          <div class="swiper-slide promo__slide" style="background-image:url(img/images/slide-5.jpg);">
+            <div class="wrapper">
               <div class="promo__info">
                 <div class="promo__seria">
                   <div class="promo__seria-left">X</div>
@@ -156,9 +164,11 @@
               </div>
             </div>
           </div>
-          <div class="swiper-pagination promo__pagination"></div>
+        </div>
+        <div class="wrapper promo__control">
           <div class="swiper-button-prev promo__prev"><i class="fas fa-arrow-left"></i></div>
           <div class="swiper-button-next promo__next"><i class="fas fa-arrow-right"></i></div>
+          <div class="swiper-pagination promo__pagination"></div>
         </div>
       </div>
     </section>
