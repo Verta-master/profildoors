@@ -1,0 +1,118 @@
+$(document).ready(function(){
+
+	/*================================================*\
+	----------------------Templates---------------------
+	\*================================================*/
+
+	//Scroll menu (ancre)
+	$('.b-header-menu-list-item-link').click(function(event){
+		event.preventDefault();
+		var id  = $(this).attr('href');
+		var top = $(id).offset().top;
+		$('body,html').animate({scrollTop: top}, 1500);
+	});
+
+
+
+
+
+		// Masque input phone
+		$(".i-phone").mask("+7(999) 999-9999");
+
+
+		// Animate top placeholder
+		$('.formChamp').focus(function(){
+			$(this).parent().find('.placehplder').animate({
+				'fontSize': '10px',
+				'top': '-8px'
+			});
+		});
+
+		// Animate top placeholder
+		$('.formChamp').focusout(function(){
+			if($(this).val() == "" )
+			{
+				$(this).parent().find('.placehplder').animate({
+					'fontSize': '18px',
+					'top': '-2px'
+				});
+			}
+		});
+
+		//scroll menu
+		$(window).scroll(function(){
+			if($(window).scrollTop()>90){
+				//alert('stop');
+				$('#rideUpBtn').addClass('i-scroll');
+			}else{
+				$('#rideUpBtn').removeClass('i-scroll');
+			}
+		});
+
+
+		//Tabs
+		$('.tabs-nav-item').on('click', function(){
+			$(this).closest('.tabs').find('.tabs-nav-item , .tabs-content-item').removeClass('selected');
+			$(this).addClass('selected');
+			var idactive  = $(this).find('a').attr('href');
+			$(this).closest('.tabs').find(idactive).addClass('selected');
+			return false;
+		});
+
+	/*================================================*\
+	----------------------Pages---------------------
+	\*================================================*/
+
+	/*====Home=====*/
+	$('.home-poster-slick').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: true,
+		dots:false,
+		fade: true
+	});
+
+	//tabs 
+	$('.wardrobe-nav-link').each(function(){
+		$(this).on('click', function(){
+			$thisLink = $(this); 
+			var elem = $thisLink.attr('href');
+			$thisLink.closest('#home-wardrobe-tabs').find('.wardrobe-nav-link').removeClass('selected');
+			$thisLink.closest('#home-wardrobe-tabs').find('.wardrobe-nav-link[href="'+elem+'"]').addClass('selected');
+
+			if(elem == '#wardrobe2')
+			{
+				$thisLink.closest('#home-wardrobe-tabs').addClass('i-wardrobe2');
+			}else{
+				$thisLink.closest('#home-wardrobe-tabs').removeClass('i-wardrobe2');
+			}
+			return false;
+		});
+	})
+
+
+	//Poster
+	$('.home-poster-slick-item-content').each(function(){
+		$this = $(this);
+		var heightHeader = $('.header').height();
+		var heigWindow = $(window).height();
+		var heightElem = heigWindow - heightHeader;
+		$this.css('height' , heightElem+'px');
+	});
+
+	
+
+
+
+
+	
+
+
+});//end document
+
+
+
+
+
+
+
