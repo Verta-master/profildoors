@@ -29,37 +29,32 @@
 }
 
 .promo__seria {
-//  display: flex;
-//  width: 227px;
-//  height: 65px;
+  display: flex;
+  width: 227px;
   border: solid 3px #fff;
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 }
 
 .promo__seria-left {
-  width: 70px;
+  width: 75px;
   height: 62px;
   border-right: solid 3px #fff;
-  display: table-cell;
-  vertical-align: middle;
   font-size: 32px;
   font-weight: 500;
   color: #fff;
-  line-height: 1;
+  line-height: 62px;
   position: relative;
   text-transform: uppercase;
   text-align: center;
 }
 
 .promo__seria-right {
-  width: 164px;
+  flex-grow: 1;
   height: 62px;
-  display: table-cell;
-  vertical-align: middle;
   font-size: 18px;
   font-weight: 500;
   color: #fff;
-  line-height: 1;
+  line-height: 62px;
   letter-spacing: 2px;
   position: relative;
   text-transform: uppercase;
@@ -67,9 +62,82 @@
 }
 
 .promo__title {
-
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 38px;
+  color: #fff;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
 }
 
 .promo__link {
+  color: #fff;
+  letter-spacing: 0.3px;
   
+  span::before {
+    bottom: -4px;
+    background-color: #f2f2f2;
+  }
+}
+
+.promo__control {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.promo__prev,
+.promo__next {
+  position: static;
+  width: 93px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  background-image: none;
+  transition: all .15s linear;
+  outline: none;
+  
+  svg {
+    display: block;
+    width: 33px;
+    height: 33px;
+    fill: #808080;
+  }
+}
+
+.promo__prev {
+  transform: rotate(180deg);
+  border-top: 1px solid rgb(140, 140, 140);
+}
+
+.promo__next {
+  border-left: 1px solid #808080;
+  border-bottom: 1px solid rgb(140, 140, 140);
+}
+
+.promo__pagination {
+  position: relative;
+  text-align: left;
+  color: #fff;
+  font-size: 18px;
+  line-height: 20px;
+  margin-left: 10px;
+  
+  .swiper-pagination-total {
+    
+  }
+  .swiper-pagination-current {
+    font-size: 30px;
+    margin-right: 5px;
+    font-weight: 500;
+  }
 }
