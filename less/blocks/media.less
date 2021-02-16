@@ -115,6 +115,9 @@
   .header__choice {
     padding-right: 5px;
   }
+  .header__lang--active::after {
+    top: 3px;
+  }
 }
 
 @media (max-width: 1022px) {
@@ -248,5 +251,8 @@
 @media (max-width: 480px) {
   .promo__link svg {
     fill: #fff;
+  }
+  .promo__slide {
+    height: ~"calc(100vh - 50px)";
   }
 }
