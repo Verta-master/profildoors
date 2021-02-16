@@ -1,0 +1,239 @@
+@media (max-width: 1056px) {
+  .wrapper {
+    width: 100%;
+  }
+  .header__menu {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-right: -15px;
+    background-image: url(../img/icons/menu.svg);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center;
+    
+    &--close {
+      background-image: url(../img/icons/cross.svg);
+      background-size: 15px 15px;
+    }
+  }
+  .header__info {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #282828;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  main {
+    padding-top: 50px;
+  }
+  .logo {
+    width: 92px;
+    height: 30px;
+    background-image: url(../img/images/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    img {
+      display: none;
+    }
+  }
+  .header__top {
+    display: block;
+    order: 2;
+    text-align: center;
+  }
+  .menu {
+    display: block;
+    order: 1;
+    width: 100%;
+  }
+  .header__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .social {
+      display: none;
+    }
+  }
+  .menu__list {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .menu__item {
+    margin-top: 12px;
+    margin-bottom: 14px;
+  }
+  .header__top {
+    margin-top: 50px;
+  }
+  .header__place {
+    display: none;
+  }
+  .header__link {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .seria__item {
+    margin-right: 15px;
+  }
+  .download__wrap::before {
+    width: 300px;
+    height: 250px;
+    top: -30px;
+    left: 15px;
+  }
+  .download__info {
+    padding-top: 30px;
+  }
+  .download__wrap {
+    min-height: 200px;
+  }
+  .seria__slider .swiper-wrapper {
+    flex-wrap: nowrap;
+  }
+  .seria__prev,
+  .seria__next {
+    display: flex;
+    top: 0;
+    justify-content: flex-end;
+  }
+  .seria__slider {
+    padding-top: 50px;
+  }
+  .download {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 1022px) {
+  .blog__prev,
+  .blog__next {
+    display: flex;
+    top: 0;
+    justify-content: flex-end;
+  }
+  .blog__slider {
+    padding-top: 50px;
+  }
+  .video__wrap {
+    display: block;
+  }
+  .video__info,
+  .video__block {
+    width: 100%;
+  }
+  .video__info {
+    border-top: 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .promo__seria-left,
+  .promo__title {
+    font-size: 30px;
+  }
+  .promo__slide::before {
+    width: 360px;
+  }
+  .promo__info {
+    width: 330px;
+  }
+}
+
+@media (max-width: 766px) {
+  .promo__slide::before {
+    width: 100%;
+  }
+  .footer__info,
+  .footer__developer,
+  .promo__info {
+    width: 100%;
+    text-align: center;
+  }
+  .promo__seria {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .promo__title {
+    font-size: 28px;
+  }
+  .promo__control {
+    justify-content: space-between;
+  }
+  .promo__prev {
+    order: 1;
+    margin-left: -15px;
+  }
+  .promo__pagination {
+    order: 2;
+    text-align: center;
+    margin-left: 0;
+  }
+  .promo__next {
+    order: 3;
+    margin-right: -15px;
+  }
+  .video__block {
+    iframe {
+      height: 220px !important;
+    }
+  }
+  .download {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .blog__btn,
+  .download__wrap::before {
+    display: none;
+  }
+  .download__info {
+    width: 100%;
+    text-align: center;
+    
+    .title-2 {
+      text-align: center;
+    }
+  }
+  .title-2,
+  h2 {
+    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .footer__info,
+  .download__btn {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .footer__wrap,
+  .download__link {
+    display: block;
+  }
+  .footer .social {
+    justify-content: center
+  }
+  .footer .social__item {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo__link svg {
+    fill: #fff;
+  }
+}

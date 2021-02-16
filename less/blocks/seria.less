@@ -3,15 +3,16 @@
   margin-bottom: 50px;
 }
 
-.seria__list {
-  .reset();
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -30px;
+.seria__slider {
+  box-sizing: border-box;
+  
+  .swiper-wrapper {
+    flex-wrap: wrap;
+  }
 }
 
-.seria__item {
+.seria__slide {
+  box-sizing: border-box;
   position: relative;
   width: 113px;
   margin-right: 33px;
@@ -60,4 +61,9 @@
   transform: translateX(-50%);
   bottom: -50px;
   transition: all .15s linear;
+}
+
+.seria__prev,
+.seria__next {
+  display: none;
 }

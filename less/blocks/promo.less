@@ -92,9 +92,8 @@
   z-index: 10;
 }
 
-.promo__prev,
-.promo__next {
-  position: static;
+.swiper-button-prev,
+.swiper-button-next {
   width: 93px;
   height: 60px;
   display: flex;
@@ -114,12 +113,17 @@
   }
 }
 
-.promo__prev {
+.swiper-button-prev {
   transform: rotate(180deg);
+}
+
+.promo__prev {
+  position: static;
   border-top: 1px solid rgb(140, 140, 140);
 }
 
 .promo__next {
+  position: static;
   border-left: 1px solid #808080;
   border-bottom: 1px solid rgb(140, 140, 140);
 }

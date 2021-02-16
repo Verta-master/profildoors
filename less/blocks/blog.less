@@ -12,18 +12,9 @@
   right: 30px;
 }
 
-.blog__list {
-  .reset();
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -30px;
-}
-
-.blog__item {
+.blog__slide {
   width: 312px;
   margin-right: 33px;
-  margin-bottom: 30px;
   
   &:hover,
   &:active {
@@ -87,4 +78,9 @@
     border-bottom: 1px solid #000;
     .transition();
   }
+}
+
+.blog__prev,
+.blog__next {
+  display: none;
 }

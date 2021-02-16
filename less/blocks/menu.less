@@ -6,9 +6,24 @@
 }
 
 .menu__item {
-  position: relative;
   transition: all .15s linear;
   margin-left: 5px;
+  
+  &:hover,
+  &:active {
+    .menu__link::after {
+      transition: all .15s linear;
+      opacity: 0;
+    }
+  }
+}
+
+.menu__link {
+  position: relative;
+  color: #f2f2f2;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
   
   &::after {
     content: '';
@@ -21,19 +36,4 @@
     transition: all .15s linear;
     opacity: 1;
   }
-  
-  &:hover,
-  &:active {
-    &::after {
-      transition: all .15s linear;
-      opacity: 0;
-    }
-  }
-}
-
-.menu__link {
-  color: #f2f2f2;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
 }
