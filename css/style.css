@@ -504,6 +504,19 @@ h3,
   letter-spacing: 0.8px;
   margin-bottom: 15px;
 }
+h1 {
+  letter-spacing: 3.6px;
+  color: #000;
+  text-transform: uppercase;
+}
+.title {
+  margin-top: 50px;
+  margin-bottom: 31px;
+  border-bottom: 1px solid #cac6c6;
+}
+.title h1 {
+  margin: 0;
+}
 .wrapper {
   width: 1056px;
   padding-left: 15px;
@@ -676,6 +689,9 @@ h3,
   -webkit-transition: all 0.15s linear;
   transition: all 0.15s linear;
   opacity: 0;
+}
+.menu__item--active .menu__link::after {
+  display: none;
 }
 .menu__link {
   position: relative;
@@ -1201,6 +1217,133 @@ h3,
 .footer__info a:active {
   color: #788593;
 }
+.top {
+  color: #fff;
+  background-color: #777f8c;
+}
+.top__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1006px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 15px;
+}
+.top__list li a {
+  display: block;
+  padding: 0 18px;
+  line-height: 28px;
+  font-size: 15px;
+}
+.catalog__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
+}
+.catalog__column {
+  width: 48%;
+}
+.catalog__logo {
+  width: 135px;
+  margin-bottom: 40px;
+}
+.catalog__category,
+.catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.catalog__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+  color: #333333;
+  background: #F6F6F6;
+  border-left: 3px solid #777f8c;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+.catalog__item:hover {
+  color: #fff;
+  background: #282828;
+  cursor: pointer;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+.catalog__info {
+  width: 60%;
+  padding: 15px 20px;
+}
+.catalog__img {
+  width: 40%;
+  display: block;
+  overflow: hidden;
+}
+.catalog__img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.catalog__title {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.catalog__category--columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.catalog__category--columns .catalog__seria {
+  width: 48%;
+}
+.catalog__seria {
+  position: relative;
+  padding-left: 15px;
+  margin-top: 5px;
+  font-size: 13px;
+}
+.catalog__seria::before {
+  content: "\f054";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 11px;
+  opacity: 0.3;
+}
+.catalog__seria a {
+  text-decoration: none;
+}
+.catalog__seria:hover a {
+  text-decoration: underline;
+}
+.catalog__seria:hover::before {
+  opacity: 1;
+}
 @media (max-width: 1056px) {
   .wrapper {
     width: 100%;
@@ -1384,6 +1527,20 @@ h3,
   .promo__info {
     width: 330px;
   }
+  .top__list li a {
+    padding: 0 12px;
+    font-size: 12px;
+  }
+  .catalog__wrap {
+    display: block;
+  }
+  .catalog__column {
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    max-width: 100%;
+  }
 }
 @media (max-width: 766px) {
   .promo__slide::before {
@@ -1433,6 +1590,7 @@ h3,
     margin-top: 30px;
     margin-bottom: 30px;
   }
+  .top,
   .blog__btn,
   .download__wrap::before {
     display: none;
@@ -1471,6 +1629,13 @@ h3,
     margin-left: 5px;
     margin-right: 5px;
   }
+  .title {
+    margin-top: 20px;
+    margin-bottom: 22px;
+  }
+  h1 {
+    font-size: 24px;
+  }
 }
 @media (max-width: 480px) {
   .promo__link svg {
@@ -1478,5 +1643,18 @@ h3,
   }
   .promo__slide {
     height: calc(100vh - 50px);
+  }
+  .catalog__logo {
+    width: 100px;
+  }
+  .catalog__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .catalog__info,
+  .catalog__img {
+    width: 100%;
   }
 }
