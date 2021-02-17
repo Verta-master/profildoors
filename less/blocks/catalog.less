@@ -1,0 +1,106 @@
+.catalog__wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.catalog__column {
+  width: 48%;
+}
+
+.catalog__logo {
+  width: 135px;
+  margin-bottom: 40px;
+}
+
+.catalog__category,
+.catalog__list {
+  .reset();
+  list-style: none;
+}
+
+.catalog__item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  color: #333333;
+  background: #F6F6F6;
+  border-left: 3px solid #777f8c;
+  .transition();
+  
+  &:hover {
+    color: #fff;
+    background: #282828;
+    cursor: pointer;
+    .transition();
+  }
+}
+
+.catalog__info {
+  width: 60%;
+  padding: 15px 20px;
+}
+
+.catalog__img {
+  width: 40%;
+  display: block;
+  overflow: hidden;
+  
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.catalog__title {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.catalog__category {
+  &--columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    .catalog__seria {
+      width: 48%;
+    }
+  }
+}
+
+.catalog__seria {
+  position: relative;
+  padding-left: 15px;
+  margin-top: 5px;
+  font-size: 13px;
+  
+  &::before {
+    content: "\f054";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    font-size: 11px;
+    opacity: 0.3;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  &:hover {
+    a {
+      text-decoration: underline;
+    }
+    &::before {
+      opacity: 1;
+    }
+  }
+}
