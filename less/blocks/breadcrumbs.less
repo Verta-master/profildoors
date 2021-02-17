@@ -1,0 +1,44 @@
+.breadcrumbs {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 30px;
+}
+
+.breadcrumbs__link {
+  color: #fff;
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+a.breadcrumbs__link {
+  position: relative;
+  text-decoration: none;
+  margin-top: 5px;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: ~"calc(100% - 17px)";
+    height: 1px;
+    background-color: #fff;
+    opacity: 0.5;
+    .transition();
+  }
+  
+  &::after {
+    content: "\2014";
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: baseline;
+  }
+  
+  &:hover,
+  &:active {
+    &::before {
+      opacity: 0;
+      .transition();
+    }
+  }
+}

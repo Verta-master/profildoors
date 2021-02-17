@@ -18,6 +18,14 @@
     opacity: 0.502;
     z-index: 6;
   }
+  
+  &--internal {
+    height: 400px;
+    
+    .promo__info {
+      padding-top: 0;
+    }
+  }
 }
 
 .promo__info {
@@ -146,4 +154,29 @@
     margin-right: 5px;
     font-weight: 500;
   }
+}
+
+.promo__border {
+  display: inline-block;
+  vertical-align: middle;
+  border: 3px solid #fff;
+  padding: 21px 18px 22px 18px;
+  margin-bottom: 23px;
+  
+  h1 {
+    margin: 0;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: .01em;
+  }
+}
+
+.promo__text {
+  max-width: 335px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: .025em;
 }
