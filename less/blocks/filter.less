@@ -1,0 +1,148 @@
+.filter__field {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e1e1e1;
+  
+  &:last-of-type {
+    border-bottom: 0;
+  }
+}
+
+.filter__form {
+  width: 100%;
+}
+
+.filter__drop {
+  margin-bottom: 20px;
+}
+
+.filter__list {
+  .reset();
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter__item {
+  position: relative;
+  margin-top: -1px;
+  margin-right: -1px;
+  border: 1px solid #d7d7d7;
+  text-align: center;
+  font-size: 20px;
+  line-height: 52px;
+  color: #878787;
+  text-transform: uppercase;
+  .transition();
+  
+  &::before {
+    display: none;
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 2px solid #000;
+  }
+  
+  a {
+    display: block;
+    width: 49px;
+    height: 49px;
+    text-decoration: none;
+  }
+  
+  &:hover,
+  &:active {
+    color: #282828;
+    .transition();
+  }
+  
+  &--active {
+    color: #282828;
+    font-weight: 500;
+    z-index: 5;
+    
+    &::before {
+      display: block;
+    }
+  }
+}
+
+.filter__radios {
+  padding-top: 17px;
+  padding-bottom: 14px;
+}
+
+.filter__color,
+.filter__radio {
+  display: none;
+}
+
+.filter__radiolabel {
+  display: block;
+  position: relative;
+  padding-left: 24px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: .01em;
+  cursor: pointer;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #d7d7d7;
+    background-color: #f2f2f2;
+  }
+  
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 3px;
+    width: 6px;
+    height: 6px;
+    background-color: rgba(0,0,0,0.4);
+  }
+}
+
+.filter__radio:checked + .filter__radiolabel::after {
+  display: block;
+}
+
+.filter__label {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  
+  &::before {
+    display: none;
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid #777f8c;
+    border-radius: 2px;
+  }
+  
+  &:hover::before,
+  &:active::before {
+    display: block;
+  }
+}
+
+.filter__color:checked + .filter__label::before {
+  display: block;
+}
