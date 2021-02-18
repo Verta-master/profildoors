@@ -19,10 +19,14 @@
     a {
       color: #000;
     }
+    &::before {
+      display: block;
+    }
   }
 }
 
 .tabs__name {
+  position: relative;
   width: 25%;
   height: 55px;
   border: 1px solid #d7d7d7;
@@ -42,6 +46,17 @@
     line-height: 15px;
     font-weight: 500;
     text-transform: uppercase;
+  }
+  
+  &::before {
+    content: "";
+    display: none;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    right: -1px;
+    height: 2px;
+    background: #777f8c;
   }
 }
 
