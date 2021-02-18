@@ -525,6 +525,35 @@ h1 {
   font-weight: 700;
   text-transform: uppercase;
 }
+blockquote {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  max-width: 430px;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: #f7f7f7;
+  overflow: hidden;
+}
+blockquote::before {
+  position: absolute;
+  top: -25px;
+  right: -16px;
+  content: "\f0c6";
+  font-family: "FontAwesome";
+  font-weight: 900;
+  font-size: 5.4em;
+  -webkit-transform: rotate(256deg);
+          transform: rotate(256deg);
+  color: rgba(51, 51, 51, 0.11);
+}
+blockquote p {
+  margin: 5px 0;
+}
 .wrapper {
   width: 1056px;
   padding-left: 15px;
@@ -831,6 +860,23 @@ h1 {
 .title__link svg {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+.btn-brown {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 12px 18px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #b39b89;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+.btn-brown:hover,
+.btn-brown:active {
+  opacity: 0.8;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
 }
 .promo__slide {
   position: relative;
@@ -1870,9 +1916,30 @@ a.breadcrumbs__link:active::before {
 }
 .card__group {
   position: relative;
+  margin-right: 8px;
+  margin-bottom: 8px;
 }
 .card__group:hover .tooltip {
   display: block;
+}
+.card__group--disabled {
+  pointer-events: none;
+}
+.card__group--disabled::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(../img/images/disabled.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.card__group--disabled .card__label::before,
+.card__group--disabled .card__label::after {
+  display: none !important;
 }
 .card__input {
   display: none;
@@ -1883,8 +1950,6 @@ a.breadcrumbs__link:active::before {
   overflow: hidden;
   width: 78px;
   height: 50px;
-  margin-right: 8px;
-  margin-bottom: 8px;
   cursor: pointer;
 }
 .card__label img {
@@ -1915,6 +1980,21 @@ a.breadcrumbs__link:active::before {
 .card__input:checked + .card__label::before,
 .card__input:checked + .card__label::after {
   display: block;
+}
+.card__price {
+  margin-bottom: 25px;
+  font-weight: 500;
+  color: #000;
+  font-size: 20px;
+}
+.card__click {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.card__articul {
+  margin-bottom: 30px;
+  font-size: 13px;
+  line-height: 23px;
 }
 .tabs {
   margin-top: 27px;
@@ -2125,6 +2205,86 @@ a.breadcrumbs__link:active::before {
 }
 .hit__next {
   right: 0;
+}
+.modal {
+  width: 350px;
+  max-width: 100%;
+  padding: 20px 30px;
+}
+.modal .title-4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form {
+  width: 100%;
+}
+.form__input,
+.form__message {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 2px;
+  border: 1px solid #949494;
+  color: #949494;
+}
+.form__input::-webkit-input-placeholder, .form__message::-webkit-input-placeholder {
+  opacity: 1;
+}
+.form__input::-moz-placeholder, .form__message::-moz-placeholder {
+  opacity: 1;
+}
+.form__input:-ms-input-placeholder, .form__message:-ms-input-placeholder {
+  opacity: 1;
+}
+.form__input::-ms-input-placeholder, .form__message::-ms-input-placeholder {
+  opacity: 1;
+}
+.form__input::placeholder,
+.form__message::placeholder {
+  opacity: 1;
+}
+.form__input {
+  height: 50px;
+  padding: 0 15px;
+}
+.form__message {
+  padding: 10px 15px;
+  height: 100px;
+  min-height: 100px;
+}
+.form__checkbox {
+  display: none;
+}
+.form__label {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.form__label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  color: #333;
+  text-align: center;
+  line-height: 20px;
+  font-size: 20px;
+  border: 1px solid #949494;
+  border-radius: 2px;
+}
+.form__checkbox:checked + .form__label::before {
+  content: "\2713";
+  border-color: #333;
+}
+.form__btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
 }
 @media (max-width: 1056px) {
   .wrapper {

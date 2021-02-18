@@ -159,19 +159,27 @@
             </a>
           </div>
           
+          <blockquote>
+            <p>Понравилась дверь?</p>
+            <a href="#" class="btn-brown">Задайте вопрос менеджеру</a>
+            <p>и получите скидку!</p>
+          </blockquote>
+          
+          <div class="card__price">16 376 &#8381;</div>
+          
           <div class="card__field card__field--noborder">
             <p class="title-4">Цвет</p>
             <div class="card__wrap">
               <div class="card__name">ДаркВайт</div>
               <div class="card__selection">
-                <div class="card__group">
+                <div class="card__group card__group--disabled">
                   <input type="radio" name="radio1" id="color1" class="card__input" checked="">
                   <label for="color1" class="card__label">
                     <img src="img/images/color-1.jpg" alt="Цвет">
                   </label>
                   <div class="tooltip">Цвет 1</div>
                 </div>
-                <div class="card__group">
+                <div class="card__group card__group--disabled">
                   <input type="radio" name="radio1" id="color2" class="card__input">
                   <label for="color2" class="card__label">
                     <img src="img/images/color-2.jpg" alt="Цвет">
@@ -246,6 +254,9 @@
               </div>
             </div>
           </div>
+          
+          <a data-fancybox="" data-src="#call" href="javascript:;" class="btn-brown card__click">Купить в один клик</a>
+          <p class="card__articul">Артикул: 1ZN Категория: ZN</p>
           
           <div class="tabs" id="tabs">
             <ul class="tabs__title">
@@ -512,6 +523,20 @@
       </ul>
     </div>
   </footer>
+  
+  <!-- Modal window -->
+  <div style="display: none;" id="call" class="modal">
+    <p class="title-4">Купить в один клик</p>
+    <form action="#" class="form">
+      <input type="text" class="form__input" placeholder="ФИО *" required="">
+      <input type="tel" class="form__input" placeholder="Телефон *" required="">
+      <input type="email" class="form__input" placeholder="E-mail *" required="">
+      <textarea class="form__message" placeholder="Сообщение *"></textarea>
+      <input type="checkbox" id="checkbox" class="form__checkbox">
+      <label for="checkbox" class="form__label">Я не робот</label>
+      <button type="submit" class="btn form__btn">Купить</button>
+    </form>
+  </div>
   
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
