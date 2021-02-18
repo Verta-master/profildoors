@@ -113,10 +113,36 @@
 
 .card__group {
   position: relative;
+  margin-right: 8px;
+  margin-bottom: 8px;
   
   &:hover {
     .tooltip {
       display: block;
+    }
+  }
+  
+  &--disabled {
+    pointer-events: none;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-image: url(../img/images/disabled.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .card__label {
+      &::before,
+      &::after {
+        display: none !important;
+      }
     }
   }
 }
@@ -131,8 +157,6 @@
   overflow: hidden;
   width: 78px;
   height: 50px;
-  margin-right: 8px;
-  margin-bottom: 8px;
   cursor: pointer;
   
   img {
@@ -169,4 +193,22 @@
   &::after {
     display: block;
   }
+}
+
+.card__price {
+  margin-bottom: 25px;
+  font-weight: 500;
+  color: #000;
+  font-size: 20px;
+}
+
+.card__click {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.card__articul {
+  margin-bottom: 30px;
+  font-size: 13px;
+  line-height: 23px;
 }
