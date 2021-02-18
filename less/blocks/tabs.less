@@ -1,0 +1,145 @@
+.tabs {
+  margin-top: 27px;
+}
+
+.tabs__list,
+.tabs__title {
+  .reset();
+  list-style: none;
+  display: flex;
+}
+
+.tabs__title {
+  margin-bottom: 30px;
+  
+  .ui-tabs-active {
+    background: #fff;
+    border-bottom-color: #fff;
+    
+    a {
+      color: #000;
+    }
+  }
+}
+
+.tabs__name {
+  width: 25%;
+  height: 55px;
+  border: 1px solid #d7d7d7;
+  background: #f0f0f0;
+  
+  a {
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+
+.tabs__list {
+  flex-wrap: wrap;
+}
+
+.tabs__item {
+  width: 31%;
+  margin-right: 2.33%;
+  margin-bottom: 30px;
+  
+  &:hover,
+  &:active {
+    .tabs__img {
+      border-color: #282828;
+      .transition();
+    }
+  }
+}
+
+.tabs__link {
+  display: block;
+  text-decoration: none;
+  color: #282828;
+}
+
+.tabs__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 175px;
+  margin-bottom: 6px;
+  border: 1px solid #ccc;
+  .transition();
+  
+  img {
+    display: block;
+    flex: 0 0 auto;
+    max-height: 100%;
+  }
+}
+
+.tabs__info {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.tabs__field {
+  color: #282828;
+  
+  ol {
+    .reset();
+    counter-reset: myCounter;
+    list-style-type: none;
+  
+    > li {
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    > li::before {
+      counter-increment: myCounter;
+      content: counter(myCounter) ".";
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.tabs__text {
+  ul {
+    .reset();
+    list-style: none;
+    
+    li {
+      position: relative;
+      padding-left: 20px;
+      
+      &::before {
+        content: "-";
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  
+  p {
+    margin: 0;
+  }
+  .title-4 {
+    margin-bottom: 15px;
+  }
+}
