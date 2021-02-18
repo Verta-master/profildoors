@@ -824,6 +824,14 @@ h1 {
   -webkit-transition: all 0.15s linear;
   transition: all 0.15s linear;
 }
+.title__link span {
+  margin-left: 5px;
+  margin-right: 0;
+}
+.title__link svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
 .promo__slide {
   position: relative;
   min-height: 300px;
@@ -1476,7 +1484,7 @@ a.breadcrumbs__link:active::before {
   font-size: 10px;
   font-weight: 500;
   color: #282828;
-  line-height: 32px;
+  line-height: 36px;
   text-transform: uppercase;
   border: 2px solid #000;
   -webkit-transition: all 0.15s linear;
@@ -1604,10 +1612,9 @@ a.breadcrumbs__link:active::before {
   margin-right: -1px;
   border: 1px solid #d7d7d7;
   text-align: center;
-  font-size: 20px;
-  line-height: 52px;
+  font-size: 16px;
+  line-height: 1;
   color: #878787;
-  text-transform: uppercase;
   -webkit-transition: all 0.15s linear;
   transition: all 0.15s linear;
 }
@@ -1622,7 +1629,15 @@ a.breadcrumbs__link:active::before {
   border: 2px solid #000;
 }
 .filter__item a {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 49px;
   height: 49px;
   text-decoration: none;
@@ -1737,6 +1752,162 @@ a.breadcrumbs__link:active::before {
   white-space: nowrap;
   -webkit-box-shadow: 0px 3px 7px 0px #000000;
           box-shadow: 0px 3px 7px 0px #000000;
+}
+.card {
+  margin-top: 114px;
+}
+.card .breadcrumbs {
+  padding-top: 25px;
+  margin-bottom: 14px;
+}
+.card .breadcrumbs__link {
+  color: #a2a2a2;
+}
+.card .breadcrumbs__link::before {
+  background-color: rgba(162, 162, 162, 0.69);
+}
+.card .title {
+  margin-top: 14px;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card .title h1 {
+  font-weight: 700;
+}
+.card__view {
+  padding-top: 20px;
+  margin-bottom: 50px;
+  position: relative;
+  text-align: center;
+}
+.card__img {
+  display: block;
+}
+.card__img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.card__parameters {
+  margin: -20px -10px 0 -10px;
+  border: 2px solid #000;
+  padding: 27px 23px 10px 23px;
+  text-align: left;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+.card__subtitle {
+  margin: 0;
+  padding-top: 10px;
+  font-weight: 700;
+  color: #282828;
+  border-top: 1px solid #e1e1e1;
+}
+.card__subtitle:first-of-type {
+  border-top: 0;
+}
+.card__parameter {
+  margin: 0;
+  padding-bottom: 9px;
+  color: #a0826c;
+}
+.card__btn {
+  margin-top: 20px;
+}
+.card__field {
+  padding-bottom: 14px;
+  padding-top: 15px;
+  border-bottom: 1px solid #cac6c6;
+}
+.card__field:last-of-type {
+  border-bottom: 0;
+}
+.card__field .title-4 {
+  margin-bottom: 4px;
+}
+.card__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.card__name {
+  width: 220px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #a0826c;
+  letter-spacing: 0.01em;
+}
+.card__selection {
+  width: calc(100% - 230px);
+  padding-top: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.card__group {
+  position: relative;
+}
+.card__group:hover .tooltip {
+  display: block;
+}
+.card__input {
+  display: none;
+}
+.card__label {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 78px;
+  height: 50px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+.card__label img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.card__label::before {
+  display: none;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #000;
+}
+.card__label::after {
+  display: none;
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  border: 3px solid #fff;
+}
+.card__input:checked + .card__label::before,
+.card__input:checked + .card__label::after {
+  display: block;
 }
 @media (max-width: 1056px) {
   .wrapper {
