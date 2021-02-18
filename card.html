@@ -389,6 +389,90 @@
         </div>
       </div>
     </section>
+    
+    <section class="hit">
+      <div class="wrapper">
+        <p class="hit__title">Другие модели серии</p>
+        <a href="#" class="link hit__link">
+          <span>Посмотреть все серии</span>
+          <svg x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+            <use href="#icon-arrow"></use>
+          </svg>
+        </a>
+        <div class="hit__wrap">
+          <div class="swiper-container hit__slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide hit__slide">
+                <a href="#" class="product__link">
+                  <figure class="product__img">
+                    <img src="img/images/1nk_dub_skay_denim.jpg" alt="Серия U">
+                  </figure>
+                  <p class="product__title">1U</p>
+                </a>
+              </div>
+              <div class="swiper-slide hit__slide">
+                <a href="#" class="product__link">
+                  <figure class="product__img">
+                    <img src="img/images/1xn_.png" alt="Серия U">
+                  </figure>
+                  <p class="product__title">2U</p>
+                </a>
+              </div>
+              <div class="swiper-slide hit__slide">
+                <a href="#" class="product__link">
+                  <figure class="product__img">
+                    <img src="img/images/2U_darkvayt_uzor2-grafit-s-prozrachnym-fyuzingom.jpg" alt="Серия U">
+                  </figure>
+                  <p class="product__title">3U</p>
+                </a>
+              </div>
+              <div class="swiper-slide hit__slide">
+                <a href="#" class="product__link">
+                  <figure class="product__img">
+                    <img src="img/images/4E_magnoliya_perlamutrovyy_lak_mat_khrom.jpg" alt="Серия U">
+                  </figure>
+                  <p class="product__title">7U</p>
+                </a>
+              </div>
+              <div class="swiper-slide hit__slide">
+                <a href="#" class="product__link">
+                  <figure class="product__img">
+                    <img src="img/images/6Z_KHROM_MAT_Venge_kroskut_belyy_lak.jpg" alt="Серия U">
+                  </figure>
+                  <p class="product__title">8U</p>
+                </a>
+              </div>
+              <div class="swiper-slide hit__slide">
+                <a href="#" class="product__link">
+                  <figure class="product__img">
+                    <img src="img/images/7STK_Pine_Manhattan_Grey-copy.jpg" alt="Серия U">
+                  </figure>
+                  <p class="product__title">14U</p>
+                </a>
+              </div>
+              <div class="swiper-slide hit__slide">
+                <a href="#" class="product__link">
+                  <figure class="product__img">
+                    <img src="img/images/27L_W_gold.png" alt="Серия U">
+                  </figure>
+                  <p class="product__title">15U</p>
+                </a>
+              </div>
+              <div class="swiper-slide hit__slide">
+                <a href="#" class="product__link">
+                  <figure class="product__img">
+                    <img src="img/images/1nk_dub_skay_denim.jpg" alt="Серия U">
+                  </figure>
+                  <p class="product__title">1U</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev hit__prev"><i class="fas fa-chevron-left"></i></div>
+          <div class="swiper-button-next hit__next"><i class="fas fa-chevron-right"></i></div>
+        </div>
+      </div>
+    </section>
   </main>
   
   <footer class="footer">
@@ -439,6 +523,32 @@
   <script>
     $(function() {
       $("#tabs").tabs();
+    });
+  </script>
+  
+  <!-- Sliders -->
+  <script>
+    var mySwiper = new Swiper ('.hit__slider', {
+      navigation: {
+        nextEl: '.hit__next',
+        prevEl: '.hit__prev',
+      },
+      simulateTouch: false,
+      preventClicks: false,
+      preventClicksPropagation: false,
+      slidesPerView: 7,
+      spaceBetween: 20,
+      breakpoints: {
+        1022: {
+          slidesPerView: 5,
+        },
+        766: {
+          slidesPerView: 4,
+        },
+        480: {
+          slidesPerView: 2,
+        }
+      }
     });
   </script>
 </body>
